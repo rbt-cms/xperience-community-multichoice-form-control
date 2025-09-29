@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework Condition="'$(TargetFramework)' == ''">net8.0</TargetFramework>
+    <AdminOrgName>xperienceCommunity</AdminOrgName>
+  
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Nullable>disable</Nullable>
+    <HotChocolateImplicitUsings>disable</HotChocolateImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdminClientPath Include="Admin\Client\dist\**">
+      <ProjectName>multichoice-formcontrol</ProjectName>
+    </AdminClientPath>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Admin\Client\node_modules\**" />
+    <Compile Remove="Admin\Client\src\custom-layout\**" />
+    <Compile Remove="Admin\UIPages\CustomTemplate\**" />
+    <Content Remove="Admin\Client\src\custom-layout\**" />
+    <Content Remove="Admin\UIPages\CustomTemplate\**" />
+    <EmbeddedResource Remove="Admin\Client\node_modules\**" />
+    <None Remove="Admin\Client\node_modules\**" />
+    <None Remove="Admin\Client\src\custom-layout\**" />
+    <None Remove="Admin\UIPages\CustomTemplate\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Admin\UIPages\UserListExtender\UserListExtender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="kentico.xperience.admin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\UIPages\UserListExtender\" />
+  </ItemGroup>
+</Project>
