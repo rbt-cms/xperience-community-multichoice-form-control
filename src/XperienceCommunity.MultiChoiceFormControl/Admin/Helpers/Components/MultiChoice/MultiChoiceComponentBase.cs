@@ -1,7 +1,7 @@
 ﻿using CMS.Core;
 using Kentico.Xperience.Admin.Base.Forms;
 
-using XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.MultiChoiceFormComponent;
+using XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent;
 
 namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.MultiChoice
 {

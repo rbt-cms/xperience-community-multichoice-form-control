@@ -15,7 +15,7 @@ namespace XperienceCommunity.MultiChoiceFormControl
         public const string CUSTOM_CATEGORY = "xperienceCommunity.MultiChoice.Formcontorl";
 
         public MultiChoiceFormControlModule()
-            : base("xperienceCommunity.multichoice.formcontrol")
+            : base("xperienceCommunity.multichoiceformcontrol")
         {
         }
 
@@ -24,7 +24,7 @@ namespace XperienceCommunity.MultiChoiceFormControl
             base.OnInit();
 
             // Makes the module accessible to the admin UI
-            RegisterClientModule("xperienceCommunity", "multichoice-formcontrol");
+            RegisterClientModule("xperienceCommunity", "multichoiceformcontrol");
         }
     }
 }

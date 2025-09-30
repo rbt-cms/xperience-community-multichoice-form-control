@@ -7,8 +7,8 @@ module.exports = (opts, argv) => {
     return baseWebpackConfig({
       // Sets the organizationName and projectName
       // The JS module is registered on the backend using these values
-        orgName: "xperienceCommunity",
-        projectName: "multichoice-formcontrol",
+        orgName: "xperiencecommunity",
+        projectName: "multichoiceformcontrol",
       webpackConfigEnv: webpackConfigEnv,
       argv: argv,
     });

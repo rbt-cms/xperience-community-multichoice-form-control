@@ -71,7 +71,6 @@ builder.Services.AddSingleton<IEmailActivityTrackingEvaluator, EmailActivityTrac
 builder.Services.AddTransient<IMultiChoiceOptionsProviderActivator, MultiChoiceOptionsProviderActivator>();
 // Add the following line to fix the CS1061 error.
 //builder.Services.AddXperienceCommunityMultiChoiceFormControl();
-
 ConfigureEmailBuilder(builder.Services);
 ConfigureMembershipServices(builder.Services);
 

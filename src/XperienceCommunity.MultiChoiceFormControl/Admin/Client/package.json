@@ -1,5 +1,5 @@
 {
-  "name": "xperienceCommunity-multichoice-formcontrol",
+  "name": "xperiencecommunity-multichoiceformcontrol",
   "version": "1.0.0",
   "description": "xperienceCommunity Multichoice Formcontrol project.",
   "private": true,
@@ -38,4 +38,3 @@
     "not IE 11"
   ]
 }
-

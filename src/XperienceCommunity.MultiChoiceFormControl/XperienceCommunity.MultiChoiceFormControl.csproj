@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFramework Condition="'$(TargetFramework)' == ''">net8.0</TargetFramework>
-    <AdminOrgName>xperienceCommunity</AdminOrgName>
+    <AdminOrgName>xperiencecommunity</AdminOrgName>
   
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <Nullable>disable</Nullable>
@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <AdminClientPath Include="Admin\Client\dist\**">
-      <ProjectName>multichoice-formcontrol</ProjectName>
+      <ProjectName>multichoiceformcontrol</ProjectName>
     </AdminClientPath>
   </ItemGroup>
   <ItemGroup>
@@ -34,5 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\UIPages\UserListExtender\" />
+    <Folder Include="Admin\UIFormComponents\MultiChoiceFormComponent\" />
   </ItemGroup>
 </Project>

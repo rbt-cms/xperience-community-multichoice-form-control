@@ -1,18 +1,20 @@
 ﻿using CMS.Core;
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.Xperience.Admin.Base.Forms;
+
+using XperienceCommunity.MultiChoiceFormControl.Admin;
 using XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.MultiChoice;
-using XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.MultiChoiceFormComponent;
+using XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent;
 
 [assembly: RegisterFormComponent(MultiChoiceFormComponent.IDENTIFIER, typeof(MultiChoiceFormComponent), "Multi Choice selector")]
-namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.MultiChoiceFormComponent
+namespace XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent
 {
     [ComponentAttribute(typeof(MultiChoicComponentAttribute))]
     [ComponentAvailableForFieldDataType(["text"])]
     public class MultiChoiceFormComponent : MultiChoiceComponentBase<MultiChoiceFormComponentProperties, MultiChoiceFormComponentClientProperties>
     {
-        public const string IDENTIFIER = "XperienceCommunity.UIFormComponents.MultiChoice";
-        public override string ClientComponentName => "@XperienceCommunity/multichoice-formcontrol/MultiChoice";
+        public const string IDENTIFIER = "XperienceCommunity.Multichoiceformcontrol.MultiChoice";
+        public override string ClientComponentName => "@xperiencecommunity/multichoiceformcontrol/MultiChoice";
         public MultiChoiceFormComponent(ILocalizationService localizationService) : base(localizationService)
         {
         }
@@ -45,9 +47,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
         [TextInputComponent(Label = "{$base.forms.dropdown.optionsvalueseparator.label$}", ExplanationText = "{$base.forms.dropdown.optionsvalueseparator.explanation$}")]
         [RequiredValidationRule]
         public string OptionsValueSeparator { get; set; } = ";";
-        //internal IEnumerable<DropDownOptionItem> OptionsItems { get; set; }
-        internal IEnumerable<CheckBoxComponent> OptionsItems { get; set; }
-
+        internal IEnumerable<DropDownOptionItem> OptionsItems { get; set; }
         [TextInputComponent(Label = "{$base.forms.dropdown.placeholder.label$}", Tooltip = "{$base.forms.dropdown.placeholder.tooltip$}")]
         public string Placeholder { get; set; }
     }
