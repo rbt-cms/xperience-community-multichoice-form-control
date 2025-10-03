@@ -5,7 +5,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.Mul
 {
     public interface IMultiChoiceOptionsProviderActivator
     {
-        IMultiChoiceOptionsProvider Activate(Type dataProviderType);
+        public IMultiChoiceOptionsProvider Activate(Type dataProviderType);
     }
 
     public class MultiChoiceOptionsProviderActivator(IHttpContextAccessor httpContextAccessor) : IMultiChoiceOptionsProviderActivator
@@ -13,17 +13,14 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.Mul
 
         private readonly IHttpContextAccessor httpContextAccessor = httpContextAccessor ?? throw new ArgumentNullException(nameof(httpContextAccessor));
 
-        public IMultiChoiceOptionsProvider Activate(Type optionsProviderType)
+        public IMultiChoiceOptionsProvider Activate(Type dataProviderType)
         {
-            if (optionsProviderType == null)
+            ArgumentNullException.ThrowIfNull(dataProviderType);
+            if (!dataProviderType.IsAssignableTo(typeof(IMultiChoiceOptionsProvider)))
             {
-                throw new ArgumentNullException("optionsProviderType");
+                throw new InvalidOperationException($"The class {dataProviderType.Name} does not implement the {"IMultiChoiceOptionsProvider"} interface.");
             }
-            if (!optionsProviderType.IsAssignableTo(typeof(IMultiChoiceOptionsProvider)))
-            {
-                throw new InvalidOperationException($"The class {optionsProviderType.Name} does not implement the {"IMultiChoiceOptionsProvider"} interface.");
-            }
-            return (IMultiChoiceOptionsProvider)ActivatorUtilities.CreateInstance(httpContextAccessor.HttpContext.RequestServices, optionsProviderType);
+            return (IMultiChoiceOptionsProvider)ActivatorUtilities.CreateInstance(httpContextAccessor.HttpContext.RequestServices, dataProviderType);
         }
     }
 }

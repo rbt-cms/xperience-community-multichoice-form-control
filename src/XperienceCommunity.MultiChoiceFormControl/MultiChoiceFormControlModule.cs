@@ -1,6 +1,6 @@
-﻿using XperienceCommunity.MultiChoiceFormControl;
+﻿using Kentico.Xperience.Admin.Base;
 
-using Kentico.Xperience.Admin.Base;
+using XperienceCommunity.MultiChoiceFormControl;
 
 [assembly: CMS.AssemblyDiscoverable]
 [assembly: CMS.RegisterModule(typeof(MultiChoiceFormControlModule))]

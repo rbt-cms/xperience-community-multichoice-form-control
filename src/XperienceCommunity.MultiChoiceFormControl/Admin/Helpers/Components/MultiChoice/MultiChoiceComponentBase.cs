@@ -1,4 +1,5 @@
 ﻿using CMS.Core;
+
 using Kentico.Xperience.Admin.Base.Forms;
 
 using XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent;
@@ -10,12 +11,12 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.Mul
         private readonly ILocalizationService localizationService;
         private readonly IMultiChoiceOptionsProviderActivator optionsProviderActivator;
 
-        public MultiChoiceComponentBase(ILocalizationService localizationService)
+        protected MultiChoiceComponentBase(ILocalizationService localizationService)
             : this(localizationService, Service.Resolve<IMultiChoiceOptionsProviderActivator>())
         {
         }
 
-        internal MultiChoiceComponentBase(ILocalizationService localizationService, IMultiChoiceOptionsProviderActivator optionsProviderActivator)
+        protected MultiChoiceComponentBase(ILocalizationService localizationService, IMultiChoiceOptionsProviderActivator optionsProviderActivator)
         {
             this.localizationService = localizationService ?? throw new ArgumentNullException(nameof(localizationService));
             this.optionsProviderActivator = optionsProviderActivator ?? throw new ArgumentNullException(nameof(optionsProviderActivator));
@@ -42,7 +43,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.Mul
         {
             if (Properties.DataProviderType != null)
             {
-                IMultiChoiceOptionsProvider multiChoiceOptionsProvider = optionsProviderActivator.Activate(Properties.DataProviderType);
+                var multiChoiceOptionsProvider = optionsProviderActivator.Activate(Properties.DataProviderType);
                 if (multiChoiceOptionsProvider is IFieldEditorFormContextConsumer fieldEditorFormContextConsumer && FormContext is FieldEditorFormContext fieldEditorContext)
                 {
                     fieldEditorFormContextConsumer.FieldEditorContext = fieldEditorContext;

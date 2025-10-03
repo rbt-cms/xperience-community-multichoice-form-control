@@ -1,7 +1,7 @@
 ﻿namespace XperienceCommunity.MultiChoiceFormControl.Admin
 {
-    interface IFieldEditorFormContextConsumer
+    internal interface IFieldEditorFormContextConsumer
     {
-        FieldEditorFormContext FieldEditorContext { get; set; }
+        public FieldEditorFormContext FieldEditorContext { get; set; }
     }
 }

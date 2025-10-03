@@ -1,4 +1,5 @@
 ﻿using CMS.Core;
+
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.Xperience.Admin.Base.Forms;
 
@@ -55,6 +56,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent
     /// <summary>
     /// Define Component Attribute
     /// </summary>
+    [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
     public class MultiChoicComponentAttribute : FormComponentAttribute
     {
         public Type DataProviderType { get; set; }

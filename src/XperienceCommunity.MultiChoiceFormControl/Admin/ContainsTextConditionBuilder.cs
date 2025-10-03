@@ -1,4 +1,5 @@
 ﻿using CMS.DataEngine;
+
 using Kentico.Xperience.Admin.Base.Filters;
 
 namespace XperienceCommunity.MultiChoiceFormControl.Admin
@@ -15,7 +16,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin
             // Creates a new where condition
             var whereCondition = new WhereCondition();
 
-            if (value is null || value is not string)
+            if (value is not string)
             {
                 // Returns an empty condition if a valid value is not specified
                 return Task.FromResult<IWhereCondition>(whereCondition);

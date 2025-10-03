@@ -2,6 +2,6 @@
 {
     public interface IMultiChoiceOptionsProvider
     {
-        Task<IEnumerable<MultiChoiceOptionItem>> GetOptionItems();
+        public Task<IEnumerable<MultiChoiceOptionItem>> GetOptionItems();
     }
 }
