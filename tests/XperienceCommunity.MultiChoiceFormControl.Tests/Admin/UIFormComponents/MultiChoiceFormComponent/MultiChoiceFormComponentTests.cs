@@ -26,12 +26,17 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
         [Test]
         public void Constructor_SetsClientComponentName()
         {
-            // Arrange & Act  
-            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(localizationServiceMock.Object);
+            // Arrange
+            var ctrLocalizationServiceMock = new Mock<ILocalizationService>();
+            var ctrOptionsProviderActivatorMock = new Mock<IMultiChoiceOptionsProviderActivator>();
 
-            // Assert  
+            // Act
+            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(ctrLocalizationServiceMock.Object, ctrOptionsProviderActivatorMock.Object);
+
+            // Assert
             Assert.That(component.ClientComponentName, Is.EqualTo("@xperiencecommunity/multichoiceformcontrol/MultiChoice"));
         }
+
 
 
         [Test]
