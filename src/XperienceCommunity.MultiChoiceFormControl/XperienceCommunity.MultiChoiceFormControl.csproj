@@ -6,6 +6,11 @@
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <Nullable>disable</Nullable>
     <HotChocolateImplicitUsings>disable</HotChocolateImplicitUsings>
+    <PackageProjectUrl>https://github.com/rbt-cms/xperience-community-multichoice-form-control</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rbt-cms/xperience-community-multichoice-form-control</RepositoryUrl>
+    <PackageTags>xperience;kentico;aspnetcore;xbyk;multichoiceselector</PackageTags>
+    <PackageReleaseNotes>https://github.com/rbt-cms/xperience-community-multichoice-form-control</PackageReleaseNotes>
+    <Version>$(VersionPrefix)</Version>
   </PropertyGroup>
   <ItemGroup>
     <AdminClientPath Include="Admin\Client\dist\**">

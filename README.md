@@ -2,18 +2,19 @@
 
 
 
-A custom form component for Xperience by Kentico that enables editors to add multi-select (checkbox-based) fields to forms. This control enhances the default form functionality by allowing users to select multiple options, making it ideal for surveys, preference selections, and advanced form scenarios
+A custom form control for Xperience by Kentico that enables editors to configure and use multi-choice (checkbox-based) fields within Content Types and Reusable Fields.
+This control extends the standard field form functionality, allowing multiple selections and providing a flexible solution for building richer content structures.
 
 ### Key Features:
 
-- Supports multiple selection options
-- Fully integrated with Xperience by Kentico Form Builder
-- Easy configuration through the Admin UI
+- Enables multi-choice (checkbox-based) selection
+- Usable in Content Types and Reusable Fields
+- Simple setup and configuration via the Admin UI
 - Extensible and reusable across projects
 
 
 # Description
-A custom multi-select form control for Xperience by Kentico, enabling users to select multiple options in forms.
+A custom multi-choice form control for Xperience by Kentico, enabling editors to allow multiple selections for Content Type fields and reusable form fields.
 
 ## Requirements
 
@@ -40,10 +41,9 @@ dotnet add package XperienceCommunity.MultiChoiceFormControl
 
 ## Quick Start
 
-### Form Control
+### Using the Form Control
 
-This is a form control which allows you to add a Multi Choice Selecore to your page types and content Items while adding. 
-
+This custom form control allows you to add a Multi-Choice Selector to your Content Types and Reusable Fields, enabling editors to select multiple options when creating or editing content items.
 ### Screenshots
 
 #1 -
@@ -53,7 +53,7 @@ This is a form control which allows you to add a Multi Choice Selecore to your p
 
 ## Use DancingGoat sample
 
-You can restore database with configured samples. View [DancingGoat Sample Database](https://github.com/rbt-cms/xperience-community-googlemap-widget/blob/main/db/xpDancingGoat_2960.bak).
+You can restore database with configured samples. View [DancingGoat Sample Database]().
 
 Dashboard User Name: Administrator
 
