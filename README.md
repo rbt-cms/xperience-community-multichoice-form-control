@@ -2,10 +2,18 @@
 
 
 
----This section contains general information about the repository template and is to be deleted before submitting a pull request with the final documentation.---
+A custom form component for Xperience by Kentico that enables editors to add multi-select (checkbox-based) fields to forms. This control enhances the default form functionality by allowing users to select multiple options, making it ideal for surveys, preference selections, and advanced form scenarios
+
+### Key Features:
+
+- Supports multiple selection options
+- Fully integrated with Xperience by Kentico Form Builder
+- Easy configuration through the Admin UI
+- Extensible and reusable across projects
+
 
 # Description
-It displays map obtained from the Google maps service using Latitude,Longitude and Google API Key.
+A custom multi-select form control for Xperience by Kentico, enabling users to select multiple options in forms.
 
 ## Requirements
 
@@ -39,13 +47,9 @@ This is a form control which allows you to add a Multi Choice Selecore to your p
 ### Screenshots
 
 #1 -
-![screenshot 1](https://github.com/rbt-cms/xperience-community-googlemap-widget/blob/main/images/1.png)
+
 
 #2
-![screenshot 2](https://github.com/rbt-cms/xperience-community-googlemap-widget/blob/main/images/2.png)
-
-#3
-![screenshot 3](https://github.com/rbt-cms/xperience-community-googlemap-widget/blob/main/images/3.png)
 
 ## Use DancingGoat sample
 
