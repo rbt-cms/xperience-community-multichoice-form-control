@@ -39,7 +39,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.Mul
         /// Get Options for multichoice selector
         /// </summary>
         /// <returns></returns>
-        protected async Task<IEnumerable<MultiChoiceOptionItem>> GetOptions()
+        public async Task<IEnumerable<MultiChoiceOptionItem>> GetOptions()
         {
             if (Properties.DataProviderType != null)
             {

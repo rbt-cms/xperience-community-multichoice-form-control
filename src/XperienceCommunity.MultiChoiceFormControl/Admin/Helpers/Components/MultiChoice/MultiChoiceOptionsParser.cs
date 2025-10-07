@@ -2,7 +2,7 @@
 
 namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.MultiChoice
 {
-    internal static class MultiChoiceOptionsParser
+    public static class MultiChoiceOptionsParser
     {
         //
         // Summary:

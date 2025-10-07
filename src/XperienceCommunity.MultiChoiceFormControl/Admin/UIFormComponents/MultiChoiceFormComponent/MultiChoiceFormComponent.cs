@@ -1,4 +1,5 @@
-﻿using CMS.Core;
+﻿
+using CMS.Core;
 
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.Xperience.Admin.Base.Forms;
@@ -20,10 +21,12 @@ namespace XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent
         {
         }
 
-        internal MultiChoiceFormComponent(ILocalizationService localizationService, IMultiChoiceOptionsProviderActivator optionsProviderActivator)
+        public MultiChoiceFormComponent(ILocalizationService localizationService, IMultiChoiceOptionsProviderActivator optionsProviderActivator)
         : base(localizationService, optionsProviderActivator)
         {
         }
+
+        public new bool GetOptions() => throw new NotImplementedException();
     }
 
     /// <summary>
