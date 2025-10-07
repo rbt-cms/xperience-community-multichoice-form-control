@@ -30,21 +30,17 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.Mul
     [TestFixture]
     public class MultiChoiceComponentBaseTests
     {
-        private Mock<ILocalizationService> localizationServiceMock = null!;
-        private Mock<IMultiChoiceOptionsProviderActivator> optionsProviderActivatorMock = null!;
-        private Mock<IMultiChoiceOptionsProvider> optionsProviderMock = null!;
+        public Mock<ILocalizationService> LocalizationServiceMock = null!;
+        public Mock<IMultiChoiceOptionsProviderActivator> OptionsProviderActivatorMock = null!;
+        public Mock<IMultiChoiceOptionsProvider> OptionsProviderMock = null!;
 
         [SetUp]
         public void SetUp()
         {
-            localizationServiceMock = new Mock<ILocalizationService>();
-            //localizationServiceMock.Setup(x => x.LocalizeString(It.IsAny<string>(), It.IsAny<string>() ?? string.Empty))
-            //    .Returns((string s, string arg) => s);
-            //localizationServiceMock.Setup(x => x.GetString(It.IsAny<string>(), It.IsAny<string>() ?? string.Empty))
-            //    .Returns((string s, string arg) => s);
+            LocalizationServiceMock = new Mock<ILocalizationService>();
 
-            optionsProviderActivatorMock = new Mock<IMultiChoiceOptionsProviderActivator>();
-            optionsProviderMock = new Mock<IMultiChoiceOptionsProvider>();
+            OptionsProviderActivatorMock = new Mock<IMultiChoiceOptionsProviderActivator>();
+            OptionsProviderMock = new Mock<IMultiChoiceOptionsProvider>();
         }
     }
 }

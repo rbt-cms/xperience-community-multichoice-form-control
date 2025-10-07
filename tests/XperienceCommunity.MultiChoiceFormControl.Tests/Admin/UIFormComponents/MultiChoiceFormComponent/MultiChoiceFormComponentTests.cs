@@ -1,4 +1,4 @@
-﻿using CMS.Core;
+using CMS.Core;
 
 using Moq;
 
@@ -71,8 +71,6 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
                 new() { Value = "B", Text = "Beta" }
             };
             var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(localizationServiceMock.Object, optionsProviderActivatorMock.Object);
-            //component.Properties.OptionsItems = optionsItems;
-
             // Act  
             var result = await component.GetOptions();
 

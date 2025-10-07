@@ -8,6 +8,9 @@ indent_size                                                               = 4
 indent_style                                                              = space
 insert_final_newline                                                      = true
 
+# Disable specific SonarAnalyzer rules
+dotnet_diagnostic.S2094.severity = none
+dotnet_diagnostic.S2187.severity = none
 # Formatting Rules
 
 ## IDE0055: Fix formatting
