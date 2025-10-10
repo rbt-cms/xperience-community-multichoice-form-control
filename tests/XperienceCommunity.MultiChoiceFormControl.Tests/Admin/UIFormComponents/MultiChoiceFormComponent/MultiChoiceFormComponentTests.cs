@@ -1,8 +1,12 @@
+
+
 using CMS.Core;
 
 using Moq;
-
 using XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.MultiChoice;
+
+using FormComponent = XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent;
+using FormComponentProperties = XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponentProperties;
 
 namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.MultiChoiceFormComponent
 {
@@ -26,17 +30,12 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
         [Test]
         public void Constructor_SetsClientComponentName()
         {
-            // Arrange
-            var ctrLocalizationServiceMock = new Mock<ILocalizationService>();
-            var ctrOptionsProviderActivatorMock = new Mock<IMultiChoiceOptionsProviderActivator>();
+            // Arrange & Act  
+            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(localizationServiceMock.Object);
 
-            // Act
-            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(ctrLocalizationServiceMock.Object, ctrOptionsProviderActivatorMock.Object);
-
-            // Assert
+            // Assert  
             Assert.That(component.ClientComponentName, Is.EqualTo("@xperiencecommunity/multichoiceformcontrol/MultiChoice"));
         }
-
 
 
         [Test]
@@ -64,23 +63,29 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
             var result = await component.GetOptions();
 
             // Assert  
-            Assert.That(result, Is.EqualTo(expectedOptions));
+            Assert.That(result, Is.EqualTo(expected: expectedOptions));
         }
 
         [Test]
         public async Task GetOptions_UsesOptionsItems_ReturnsOptionsItems()
         {
-            // Arrange  
-            var optionsItems = new List<MultiChoiceOptionItem>
-            {
-                new() { Value = "B", Text = "Beta" }
-            };
-            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(localizationServiceMock.Object, optionsProviderActivatorMock.Object);
-            // Act  
-            var result = await component.GetOptions();
+            var localization = Service.Resolve<ILocalizationService>();
+            var activator = Service.Resolve<IMultiChoiceOptionsProviderActivator>();
 
-            // Assert  
-            Assert.That(result, Is.EqualTo(optionsItems));
+            var component = new FormComponent(localization, activator)
+            {
+                Properties = new FormComponentProperties
+                {
+                    Options = "Option 1;1",
+                    OptionsValueSeparator = ";"
+                }
+            };
+
+            var result = (await component.GetOptions()).ToList();
+
+            Assert.That(result.Count, Is.EqualTo(1));
+            Assert.That(result[0].Text, Is.EqualTo("1"));
+            Assert.That(result[0].Value, Is.EqualTo("Option 1"));
         }
 
         [Test]

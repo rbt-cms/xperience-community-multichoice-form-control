@@ -11,6 +11,10 @@ insert_final_newline                                                      = true
 # Disable specific SonarAnalyzer rules
 dotnet_diagnostic.S2094.severity = none
 dotnet_diagnostic.S2187.severity = none
+
+# Disable Sonar cosmetic warnings in test projects
+[tests/**/*.cs]
+dotnet_analyzer_diagnostic.category-Sonar.severity = none
 # Formatting Rules
 
 ## IDE0055: Fix formatting
