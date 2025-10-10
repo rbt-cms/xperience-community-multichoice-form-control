@@ -53,6 +53,9 @@ This custom form control allows you to add a Multi-Choice Selector to your Conte
 #2.
 <img width="1599" height="964" alt="image" src="https://github.com/user-attachments/assets/46693821-cb16-4f3b-8b77-86f4e15f8d1b" />
 
+#3.
+<img width="1849" height="946" alt="image" src="https://github.com/user-attachments/assets/d7e2ca1d-411e-40e1-b3c4-4aa85c30b7b8" />
+
 
 ## Use DancingGoat sample
 
