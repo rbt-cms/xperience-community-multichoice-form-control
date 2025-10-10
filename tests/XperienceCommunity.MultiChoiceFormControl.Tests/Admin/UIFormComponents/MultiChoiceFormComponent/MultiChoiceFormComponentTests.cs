@@ -3,6 +3,7 @@
 using CMS.Core;
 
 using Moq;
+
 using XperienceCommunity.MultiChoiceFormControl.Admin.Helpers.Components.MultiChoice;
 
 using FormComponent = XperienceCommunity.MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent;
@@ -31,17 +32,16 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
         public void Constructor_SetsClientComponentName()
         {
             // Arrange & Act  
-            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(localizationServiceMock.Object);
+            var component = new FormComponent(localizationServiceMock.Object);
 
             // Assert  
             Assert.That(component.ClientComponentName, Is.EqualTo("@xperiencecommunity/multichoiceformcontrol/MultiChoice"));
         }
 
-
         [Test]
         public void Identifier_IsConstant() =>
             // Assert  
-            Assert.That(MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent.IDENTIFIER, Is.EqualTo("XperienceCommunity.Multichoiceformcontrol.MultiChoice"));
+            Assert.That(FormComponent.IDENTIFIER, Is.EqualTo("XperienceCommunity.Multichoiceformcontrol.MultiChoice"));
 
         [Test]
         public async Task GetOptions_UsesDataProviderType_ReturnsProviderOptions()
@@ -56,7 +56,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
             var providerType = typeof(FakeProvider);
             optionsProviderActivatorMock.Setup(x => x.Activate(providerType)).Returns(optionsProviderMock.Object);
 
-            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(localizationServiceMock.Object, optionsProviderActivatorMock.Object);
+            var component = new FormComponent(localizationServiceMock.Object, optionsProviderActivatorMock.Object);
             component.Properties.DataProviderType = providerType;
 
             // Act  
@@ -93,7 +93,7 @@ namespace XperienceCommunity.MultiChoiceFormControl.Admin.UIFormComponents.Multi
         {
             // Arrange  
             string optionsString = "C|Gamma";
-            var component = new MultiChoiceFormControl.MultiChoiceFormComponent.MultiChoiceFormComponent(localizationServiceMock.Object, optionsProviderActivatorMock.Object);
+            var component = new FormComponent(localizationServiceMock.Object, optionsProviderActivatorMock.Object);
             component.Properties.Options = optionsString;
             component.Properties.OptionsValueSeparator = "|";
 
