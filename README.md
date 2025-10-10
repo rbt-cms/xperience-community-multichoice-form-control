@@ -46,18 +46,20 @@ dotnet add package XperienceCommunity.MultiChoiceFormControl
 This custom form control allows you to add a Multi-Choice Selector to your Content Types and Reusable Fields, enabling editors to select multiple options when creating or editing content items.
 ### Screenshots
 
-#1 -
+#1.
+<img width="1562" height="968" alt="image" src="https://github.com/user-attachments/assets/0aff1b0a-95f5-4794-9a10-3271de0c5b90" />
 
+#2.
+<img width="1599" height="964" alt="image" src="https://github.com/user-attachments/assets/46693821-cb16-4f3b-8b77-86f4e15f8d1b" />
 
-#2
 
 ## Use DancingGoat sample
 
-You can restore database with configured samples. View [DancingGoat Sample Database]().
+You can restore database with configured samples. View [DancingGoat Sample Database](https://github.com/rbt-cms/xperience-community-multichoice-form-control/blob/main/db/xpMultiChoiceFormControl.bak).
 
 Dashboard User Name: Administrator
 
-Password: XbyK1234$
+Password: 1234567890
 
 # License
 
