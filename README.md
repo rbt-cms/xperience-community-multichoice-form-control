@@ -1,7 +1,12 @@
 ## Xperience Community Multichoice Form Control
 
 
+[![CI: Build and Test](https://github.com/rbt-cms/xperience-community-multichoice-form-control/actions/workflows/ci.yml/badge.svg)](https://github.com/rbt-cms/xperience-community-multichoice-form-control/actions/workflows/ci.yml) [![NuGet Package](https://img.shields.io/nuget/v/XperienceCommunity.MultiChoiceFormControl.svg)](https://www.nuget.org/packages/XperienceCommunity.MultiChoiceFormControl)
 
+
+
+
+# Description
 A custom form control for Xperience by Kentico that enables editors to configure and use multi-choice (checkbox-based) fields within Content Types and Reusable Fields.
 This control extends the standard field form functionality, allowing multiple selections and providing a flexible solution for building richer content structures.
 
@@ -11,10 +16,6 @@ This control extends the standard field form functionality, allowing multiple se
 - Usable in Content Types and Reusable Fields
 - Simple setup and configuration via the Admin UI
 - Extensible and reusable across projects
-
-
-# Description
-A custom multi-choice form control for Xperience by Kentico, enabling editors to allow multiple selections for Content Type fields and reusable form fields.
 
 ## Requirements
 
