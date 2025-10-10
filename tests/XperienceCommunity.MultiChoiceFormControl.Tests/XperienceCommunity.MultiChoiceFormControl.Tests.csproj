@@ -6,6 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+    <Version>$(VersionPrefix)</Version>
+    <Description>A custom form control for Xperience by Kentico that enables editors to configure and use multi-choice (checkbox-based) fields within Content Types and Reusable Fields. This control extends the standard field form functionality, allowing multiple selections and providing a flexible solution for building richer content structures.</Description>
+    <PackageProjectUrl>https://github.com/rbt-cms/xperience-community-multichoice-form-control</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rbt-cms/xperience-community-multichoice-form-control</RepositoryUrl>
+    <PackageTags>xperience;kentico;aspnetcore;multichoice;xbyk;rbt</PackageTags>
+    <PackageReleaseNotes>https://github.com/rbt-cms/xperience-community-multichoice-form-control/releases/</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
