@@ -63,7 +63,7 @@ Password: 1234567890
 
 # License
 
-This widget is provided under MIT license.
+This widget is provided under [MIT license](https://github.com/rbt-cms/xperience-community-multichoice-form-control/blob/main/LICENSE.md).
 
 # Uninstall
 
@@ -72,5 +72,3 @@ Uninstall this from the NuGet Package Manager and rebuild the project.
 # Reporting issues
 
 Please report any issues seen, in the issue list. We will address at the earliest possibility.
-
-# Compatibility
